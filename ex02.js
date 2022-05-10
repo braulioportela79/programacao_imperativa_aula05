@@ -56,13 +56,15 @@ function valorHoraTrabalho(x, y) {
     return `${parseFloat(x / y).toFixed(2)}`;
 };
 
-let salario = 8100.00;
+let salario = parseFloat(8100.00).toFixed(2);
 let horasTrabalhadas = 160;
+
+
 
 console.log(`Calculando o valor da hora de trabalho:`);
 console.log(`Horas de trabalho no mês: ${horasTrabalhadas} horas`);
-console.log(`Salário no mês: R$${parseFloat(salario).toFixed(2)}`);
-console.log(`Você recebe: R$${valorHoraTrabalho(salario, horasTrabalhadas)} por hora`);
+console.log(`Salário no mês: R$${salario.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`);
+console.log(`Você recebe: R$${valorHoraTrabalho(salario, horasTrabalhadas).replace(/\B(?=(\d{3})+(?!\d))/g, ",")} por hora`);
 console.log(`-------------------------------------`);
 
 // 6 - Crie a função calculadora de IMC* de uma pessoa, que recebe a altura em centímetros e o peso em quilogramas. Em seguida, execute a função, testando diferentes valores. *IMC, significa Índice de Massa Corporal e é um parâmetro utilizado para saber se o peso está de acordo com a altura.
