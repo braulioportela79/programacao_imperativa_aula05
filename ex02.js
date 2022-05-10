@@ -59,8 +59,6 @@ function valorHoraTrabalho(x, y) {
 let salario = parseFloat(8100.00).toFixed(2);
 let horasTrabalhadas = 160;
 
-
-
 console.log(`Calculando o valor da hora de trabalho:`);
 console.log(`Horas de trabalho no mês: ${horasTrabalhadas} horas`);
 console.log(`Salário no mês: R$${salario.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`);
